@@ -1,0 +1,29 @@
+<h1 mat-dialog-title>{{title}}</h1>
+<div mat-dialog-content>
+    <form [formGroup]="productForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Naziv proizvoda</mat-label>
+            <input formControlName="name" matInput placeholder="Product proizvoda..">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Brend proizvoda</mat-label>
+            <input formControlName="brand" matInput placeholder="Brend proizvoda..">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Cijena proizvoda</mat-label>
+            <input formControlName="price" type="number" matInput placeholder="Cijena proizvoda..">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Slika</mat-label>
+            <input formControlName="image_url" type="link" matInput placeholder="Link slike..">
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+            <mat-label>Deskripcija</mat-label>
+            <textarea formControlName="description" matInput placeholder="Deskripcija.."></textarea>
+        </mat-form-field>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+<button mat-raised-button color="primary" (click)="addProduct()">{{actionBtn}}</button>
+<button mat-raised-button color="warn" mat-dialog-close>Close</button>
+</div>

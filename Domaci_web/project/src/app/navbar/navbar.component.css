@@ -1,0 +1,9 @@
+a{
+    padding: 0 10px 0 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.example-spacer {
+    flex: 1 1 auto;
+  }
